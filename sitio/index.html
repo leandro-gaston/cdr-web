@@ -1,0 +1,61 @@
+---
+layout: default
+---
+
+<div class="home-content">
+
+	{% include home_head.html %}
+	<hr style="border:dashed 1px #ddd">
+	
+	<h2>Novedades</h2>
+	
+	<div class="novedades_grid">
+	{% for postre in site.posts limit: 4 %}
+			<div class="main_block">
+				<img src="{{ postre.img }}"/>
+				<h4> {{ postre.title }} </h4>
+				<a class="block-link"  title="{{ postre.descripcion }}" href="{{ postre.permalink }}"><span></span></a>
+			</div>
+	{% endfor %}
+	</div>
+	
+	<hr style="border:dashed 1px #ddd">
+	
+	<div class="main_proy">
+		
+		<div class="main_sec_info">
+			<h2>	Proyectos	</h2>
+			<p>	En esta sección encontrará los distintos proyectos activos y completados del Club, junto con toda la documentación, imagenes y videos de los mismos.<p>
+			<p>	Para acceder <a href="/proyectos/"> haga click aqui.</a> <p>
+		</div>
+		
+		<div class="main_sec_image">
+			<a href="/proyectos/">
+			<img src="/img/proy_sec.jpg" title="Proyectos"/>	
+			</a>
+		</div>
+
+	</div>
+	
+	<hr style="border:dashed 1px #ddd">	
+	
+	<div class="main_pres">
+		
+		
+		<div class="main_sec_info">
+			<h2>	Presentaciones	</h2>
+			<p>	En esta sección encontrará las presentaciones de los cursos y seminarios dictados en el club, junto con los archivos suministrados para las mismas.<p>
+			<p>	Para acceder <a href="/presentaciones/"> haga click aqui.</a> <p>
+			
+		</div>
+		
+		<div class="main_sec_image">
+			<a href="/presentaciones/">
+			<img src="../img/pres_sec.jpg" title="Presentaciones"/>
+			</a>
+		</div>
+	</div>
+	
+	<hr style="border:dashed 1px #ddd">		
+	
+</div>

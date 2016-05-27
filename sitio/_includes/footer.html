@@ -1,0 +1,27 @@
+<footer>
+  <div class="fwrapper">
+   	<a name="contacto"></a>
+    <div class="footer-col-wrapper">
+      <div class="footer-col-1">
+		<p class="foot-title" style="text-align:left"> Contacto </p>
+          <a class="contact-list" href="mailto:{{ site.email }}">{{ site.email }}</a>
+      </div>
+      <div class="footer-col footer-col-2">
+		<p class="foot-title" style="text-align:right"> Redes </p>
+        <ul class="list-social" type="none">
+			{% for network in site.social %}
+			<li><a href="{{ network.url }}">
+					<img title="{{ network.title }}" alt="{{ network.title }}" src="/logos/{{network.title}}.png" width="30px" style="margin:5px 5px"/>
+				</a>
+			</li>
+			{% endfor %}
+		</ul>
+		</div>
+      <div class="footer-col footer-col-3">
+        <p class="desc">{{ site.description }}</p>
+      </div>
+    </div>
+   	<h5 class="footer-heading">{{ site.title }}</h5>
+	<p class="desc" style="margin-top:-20px"> Copyright © 2016 - CDR - FI UNLP </p>
+  </div>
+</footer>

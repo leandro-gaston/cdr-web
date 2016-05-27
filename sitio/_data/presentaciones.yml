@@ -1,0 +1,55 @@
+- titulo:	"01 - Conceptos sobre Soldadura de Componentes Electrónicos"
+  desc:		"Esta presentación comenta las principales técnicas y cuidados para realizar soldadura manual. Seminario dado en 2013 por el Mg. Ing. Ramón López La Valle."
+  fecha:	""
+  img:		"/img/pres/pres_001.jpg"
+  link:		"https://dl.dropboxusercontent.com/s/f1d9zluwu7lh6ku/%5B01%5D%20-%20pres_sem_soldadura_2013.pdf?dl=0"
+
+- titulo:	"02 - Introducción a EAGLE PCB Design - Clase 1"
+  desc:		"Primer presentación de un cursito dado durante 2015 sobre el uso del software EAGLE para realizar impresos. Créditos: Club de Robótica."
+  fecha:	""
+  img:		"/img/pres/pres_002.jpg"
+  link: 	"https://dl.dropboxusercontent.com/s/dq1r06xslkcob6k/%5B02%5D%20-%20pres_intro_eagle_2015.pdf?dl=0"
+
+- titulo:	"03 - Introducción a EAGLE PCB Design - Clase 2"
+  desc:		"Segunda presentación de un cursito dado durante 2015 sobre el uso del software EAGLE para realizar impresos. Créditos: Club de Robótica."
+  fecha:	""
+  img:		"/img/pres/pres_003.jpg"
+  link:		"https://dl.dropboxusercontent.com/s/bgjq677wxsoh6zr/%5B03%5D%20-%20pres_2daclase_eagle_2015.pdf?dl=0"
+  
+- titulo:	"04 - Introducción a EAGLE PCB Design - Clase 3"
+  desc:		"Tercer presentación de un cursito dado durante 2015 sobre el uso del software EAGLE para realizar impresos. Créditos: Club de Robótica."
+  fecha:	""
+  img:		"/img/pres/pres_004.jpg"
+  link:		"https://dl.dropboxusercontent.com/s/oybt4ukvn8by47r/%5B04%5D%20-%20pres_3raclase_eagle_2015.pdf?dl=0"
+  
+- titulo:	"05 - Sensores: Potenciómetro y LDR"
+  desc:		"En esta presentación se muestran dos tipos de sensores resistivos básicos: el potenciómetro y la resistencia variable con la luz (LDR). Créditos: Club de Robótica."
+  fecha:	""
+  img:		"/img/pres/pres_005.jpg"
+  link:		"https://dl.dropboxusercontent.com/s/l0l9lu4rg1iy97g/%5B05%5D%20-%20pres_pot_LDR_2015.pdf?dl=0"
+  
+- titulo:	"06 - LEDS y sensores reflectivos infrarojos"
+  desc:		"En esta presentación se muestran circuitos básicos de polarización de LEDs y su aplicación para utilizar sensores reflectivos como el popular CNY70, utilizado en carritos seguidores de línea. Créditos: Club de Robótica."
+  fecha:	""
+  img:		"/img/pres/pres_006.jpg"
+  link:		"https://dl.dropboxusercontent.com/s/cqppvxtt4e8zx56/%5B06%5D%20-%20pres_LED_CNY70_2015.pdf?dl=0"
+
+- titulo:	"07 - Introducción a Arduino"
+  desc:		"Estas filminas introducen al lector en el mundo Arduino, con ejemplos de comandos básicos para empezar a programar. Créditos: Club de Robótica."
+  fecha:	""
+  img:		"/img/pres/pres_007.jpg"
+  link:		"https://dl.dropboxusercontent.com/s/ga76b0agy30uvqw/%5B07%5D%20-%20pres_ARDUINO_2015.pdf?dl=0"
+  
+
+- titulo:	"08 - Control de motores de continua de baja potencia"
+  desc:		"Introducción al control de motores de DC utilizando un microcontrolador como el que posee el Arduino y utilizando drivers comerciales. Créditos: Club de Robótica."
+  fecha:	""
+  img:		"/img/pres/pres_008.jpg"
+  link:		"https://dl.dropboxusercontent.com/s/tk1cnahc9df1j0f/%5B08%5D%20-%20pres_potencia_2015.pdf?dl=0"
+  
+- titulo:	"09 - Introducción a EAGLE PCB Design - Clase 4"
+  desc:		"Cuarta presentación de un cursito dado durante 2015 sobre el uso del software EAGLE para realizar impresos. Créditos: Club de Robótica."
+  fecha:	""
+  img:		"/img/pres/pres_009.jpg"
+  link:		"https://dl.dropboxusercontent.com/s/6o5twmsvdwqu4ij/%5B09%5D%20-%20pres_4taclase_eagle_2015.pdf?dl=0"
+  
