@@ -17,20 +17,20 @@ Proyectos
 	de metadatos que requiere el sitio, indicando cuales son
 	obligatorios.
 
- 2. El contenido de los posts se escribe en el lenguaje 
+ 2	El contenido de los posts se escribe en el lenguaje 
 	Markdown, que sería un HTML diluido (lo que significa
 	que tambien acepta código html). Para editarlo pueden
 	bajarse un editor de Markdown, usar uno Online, o sino
 	directamente en un bloc de notas, y despues lo preveen
 	en uno online.
 
- 3. El cuerpo del documento depende ya del proyecto que es-
+ 3	El cuerpo del documento depende ya del proyecto que es-
 	ten documentando. La idea seria armarlos lo mas
 	descriptivos posibles (los que ya están a la fecha de
 	emisión de esta guía puede que no sean los mejores ejem-
 	plos).
 
- 4. Respecto a las imagenes, el sitio necesita 2 como mínimo
+ 4	Respecto a las imagenes, el sitio necesita 2 como mínimo
 	que son:
 
 		- Imagen Principal: (Tamaño mínimo 300x150 px)
@@ -53,7 +53,7 @@ Proyectos
 	tres cifras. El formato puede ser .jpg o .png, es 
 	indiferente.
 
- 5. El nombre del archivo tiene que seguir la siguiente
+ 5	El nombre del archivo tiene que seguir la siguiente
 	nomenclatura:
 
 		"AAA-MM-DD-titulo.md"
@@ -65,11 +65,11 @@ Proyectos
 	ración, total el sitio después usa la fecha que pongan
 	dentro de la variable "date" en la plantilla. 
 
- 6. Con el nombre acomodado y las imagenes listas, guardan
+ 6	Con el nombre acomodado y las imagenes listas, guardan
 	el archivo .md en la carpeta "_posts" y las imagenes en
 	las que se indicó en el punto 4.
 
- 7. El que tenga el Jekyll instalado, va a la carpeta 
+ 7	El que tenga el Jekyll instalado, va a la carpeta 
 	"sitio" del drop con una linea de comandos, y ejecuta
 	el comando "jekyll serve".
 	
