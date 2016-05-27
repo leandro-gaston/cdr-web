@@ -36,7 +36,7 @@ Proyectos
 		- Imagen Principal: (Tamaño mínimo 300x150 px)
 			Esta es la que aparece en la seccion "Proyectos"
 
-		- Imagen de Portada (Tamaño mínimo x px)
+		- Imagen de Portada (Tamaño mínimo 600x300 px)
 			Esta es la que aparece dentro del Proyecto, al
 			lado del titulo y la descripción.
 
