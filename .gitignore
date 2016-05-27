@@ -1,0 +1,7 @@
+sitio/_site/
+sitio/.sass-cache/
+sitio/.jekyll-metadata
+*/*/*~
+*/*~
+*~
+

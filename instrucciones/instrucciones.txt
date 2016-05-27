@@ -1,0 +1,138 @@
+-27/05/16-
+------------------------------------------------------------
+
+INSTRUCCIONES PARA AGREGAR CONTENIDO AL SITIO DEL CLUB:
+------------------------------------------------------------
+Proyectos
+---------
+
+ Antes que nada:
+
+ 0. git checkout -b "NombrelDeLaNuevaRama"
+
+ Ahora siguen:
+
+ 1.	Agarra una copia de la plantilla de "post" de la carpeta
+	"plantillas". Esta plantilla tiene los campos necesarios
+	de metadatos que requiere el sitio, indicando cuales son
+	obligatorios.
+
+ 2. El contenido de los posts se escribe en el lenguaje 
+	Markdown, que sería un HTML diluido (lo que significa
+	que tambien acepta código html). Para editarlo pueden
+	bajarse un editor de Markdown, usar uno Online, o sino
+	directamente en un bloc de notas, y despues lo preveen
+	en uno online.
+
+ 3. El cuerpo del documento depende ya del proyecto que es-
+	ten documentando. La idea seria armarlos lo mas
+	descriptivos posibles (los que ya están a la fecha de
+	emisión de esta guía puede que no sean los mejores ejem-
+	plos).
+
+ 4. Respecto a las imagenes, el sitio necesita 2 como mínimo
+	que son:
+
+		- Imagen Principal: (Tamaño mínimo 300x150 px)
+			Esta es la que aparece en la seccion "Proyectos"
+
+		- Imagen de Portada (Tamaño mínimo x px)
+			Esta es la que aparece dentro del Proyecto, al
+			lado del titulo y la descripción.
+
+	Fuera de estas dos, en el contenido del proyecto pueden
+	poner las imagenes, videos, y demás que quieran.
+
+	Para almacenar estas imagenes, lo mejor seria mantener
+	el mismo estilo en todos, esto es:
+
+	- Imagen Ppal : guardada en img/proy/xxx.jpg
+	- Imagen Ptada: guardada en img/proy/portadas/xxx.jpg
+
+	Donde "xxx" sería el número de proyecto de proyecto en
+	tres cifras. El formato puede ser .jpg o .png, es 
+	indiferente.
+
+ 5. El nombre del archivo tiene que seguir la siguiente
+	nomenclatura:
+
+		"AAA-MM-DD-titulo.md"
+
+	Esto es porque el Jekyll requiere la fecha en el nombre,
+	debe ser para ordenarlos despues o no se que, pero lo 
+	necesita. Yo diria de ponerlas de modo tal que los 
+	proyectos queden en orden ascendente por su propia nume-
+	ración, total el sitio después usa la fecha que pongan
+	dentro de la variable "date" en la plantilla. 
+
+ 6. Con el nombre acomodado y las imagenes listas, guardan
+	el archivo .md en la carpeta "_posts" y las imagenes en
+	las que se indicó en el punto 4.
+
+ 7. El que tenga el Jekyll instalado, va a la carpeta 
+	"sitio" del drop con una linea de comandos, y ejecuta
+	el comando "jekyll serve".
+	
+	Esto genera la página a partir de los archivos que 
+	encuentra y la hostea en "localhost:4000". Así que
+	abren esa dirección en el navegador y se fijan si todo
+	lo que agregaron anda bien. En caso afirmativo, agarran
+	el contenido de la carpeta "_site" (que es la página
+	generada por el jekyll) y lo mandan al servidor ftp del
+	club reemplazando todo lo que pregunte.
+
+NdA: Del punto 7 me puedo encargar yo, no hay drama,
+completen el markdown, y consigan las imagenes.
+
+NdA: Tambien creo que va a ser mejor sacar la carpeta del 
+sitio del drop, ya que la tenemos versionada en el github.
+Asi que cuando quieran agregar un post, clonen del git, 
+haganse una rama nueva, hagan los archivos y pusheen. Y en 
+el drop solo dejemos los archivos de los que necesitemos
+links (presentaciones, documentacion y demás). Asi ademas
+vamos a tener menos chances de romper todo sin querer y 
+tenemos siempre la rama master limpia con la versión estable
+de la pagina... usen ramas gatos.
+
+------------------------------------------------------------
+Presentaciones
+--------------
+
+ 1.	Agarrar el documento de las presentaciones (pdf, zip o
+	lo que sea) y guardarlo en el drop, para tener un link
+	que quede siempre.
+
+ 2.	Modificar el archivo que lista las presentaciones que se
+	encuentra en "data/presentaciones.yml" agregando al
+	final la nueva presentación con los siguientes datos:
+
+	- titulo: El título de la presentación como será visto 
+			  en el sitio.
+
+	- desc:	  La pequeña descripción que acompaña a cada 
+			  presentacion en la sección del sitio. 
+			  Mantenganla corta pero descriptiva.
+
+	- fecha:  Si quieren poner la fecha, no me acuerdo si la
+			  implemente en algun lado.
+
+	- img: 	  Imagen obligatoria que acompaña a la 
+			  presentación. Debe seguir la misma regla del
+			  punto 4 de proyectos y guardarse en
+			  "img/pres/pres_XXX.jpg"
+			  (Tamaño  mínimo 310x160 px)
+
+	- link:   El link al archivo.
+
+ 3.	Es importante que se mantenga el formato de ese archivo,
+	fijense de no agregar ni sacar espacios antes de cada
+	campo y modificar solo el contenido entre comillas.
+
+------------------------------------------------------------
+Novedades y Avisos
+------------------
+
+ Cuando lo implemente les digo =P
+
+------------------------------------------------------------
+													- Rev.A-
