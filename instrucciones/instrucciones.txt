@@ -76,13 +76,17 @@ Proyectos
 	Esto genera la página a partir de los archivos que 
 	encuentra y la hostea en "localhost:4000". Así que
 	abren esa dirección en el navegador y se fijan si todo
-	lo que agregaron anda bien. En caso afirmativo, agarran
-	el contenido de la carpeta "_site" (que es la página
-	generada por el jekyll) y lo mandan al servidor ftp del
-	club reemplazando todo lo que pregunte.
-
+	lo que agregaron anda bien. En caso afirmativo:
+	
+	- git push origin "NombreDeLaRamaQueUsaron"
+	
+	Y si tienen acceso al ftp del club agarran el contenido
+	de la carpeta "_site" (que es la página generada por el
+	jekyll) y lo mandan al servidor reemplazando todo lo
+	que pregunte.
+	
 NdA: Del punto 7 me puedo encargar yo, no hay drama,
-completen el markdown, y consigan las imagenes.
+completen el markdown, y consigan las imagenes y pusheen.
 
 NdA: Tambien creo que va a ser mejor sacar la carpeta del 
 sitio del drop, ya que la tenemos versionada en el github.
