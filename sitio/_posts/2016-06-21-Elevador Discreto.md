@@ -38,17 +38,17 @@ El elevador fue probado con baterías de Ion-Litio de 3.7V logrando tensiones de
 #### Lista de componentes:
 
 | COMP.			  |  ENCAPS.  | ESQUEMATICO  |  CANTIDAD|
-|-
-| LM2577-ADJ	  | TO220-5	  | 	U1		 | 	  x 1	|
-| Inductor 100 UH | THRU HOLE | 	L1		 | 	  x 1	|
-| Diodo shotky    | THRU HOLE | 	L1		 | 	  x 1	|
-| Resistencia 2.2k| THRU HOLE | 	R2		 | 	  x 1	|
-| Capacitor 330nF | LENTEJA	  | 	C5		 | 	  x 1	|
-| Capacitor 100nF | SMD 1206  | 	C4		 | 	  x 1	|
-| Capacitor>400uF | THRU HOLE | 	C2		 | 	  x 1	|
-| Preset 10k      | BOURNE. TH| 	R1		 | 	  x 1	|
+| :---: | :---: | :---: | :---: |
+| LM2577-ADJ	   | TO220-5	  | 	U1		 | 	  x 1	|
+| Inductor 100 UH  | THRU HOLE | 	L1		 | 	  x 1	|
+| Diodo shotky     | THRU HOLE | 	L1		 | 	  x 1	|
+| Resistencia 2.2k | THRU HOLE | 	R2		 | 	  x 1	|
+| Capacitor 330nF  | LENTEJA	| 	C5		 | 	  x 1	|
+| Capacitor 100nF  | SMD 1206  | 	C4		 | 	  x 1	|
+| Capacitor > 400uF | THRU HOLE | 	C2		 | 	  x 1	|
+| Preset 10k       | BOURNE. TH| 	R1		 | 	  x 1	|
 | Resistencia 1k  | THRU HOLE | 	R3		 | 	  x 1	|
-| Resistencia 1 ohm| THRU HOLE| 	R4		 | 	  x 1	|
+| Resistencia 1 ohm | THRU HOLE| 	R4		 | 	  x 1	|
 
 
 
@@ -78,7 +78,7 @@ El elevador fue probado con baterías de Ion-Litio de 3.7V logrando tensiones de
 
 
 
- - El diodo shotky puede conseguirse en formato SMD, generalmente tamaño 1206 o 3528 de una mother de una PC. Se encuentran cerca de los reguladores de tensión switching de la mother. [Ver foto](http://g01.a.alicdn.com/kf/HTB19wdvIXXXXXXdXXXXq6xXFXXXU/Env&iacute;o-gratuito-One-lote-100-unids-SMA-SS14-1N5819-IN5819-Schottky-diodo.jpg). Si no, puede llegar a comprarse alguno en una tienda de repuestos para fuentes switchings.
+ - El diodo shotky puede conseguirse en formato SMD, generalmente tamaño 1206 o 3528 de una mother de una PC. Se encuentran cerca de los reguladores de tensión switching de la mother ([Ver foto](http://g01.a.alicdn.com/kf/HTB19wdvIXXXXXXdXXXXq6xXFXXXU/Env&iacute;o-gratuito-One-lote-100-unids-SMA-SS14-1N5819-IN5819-Schottky-diodo.jpg)). Si no, puede llegar a comprarse alguno en una tienda de repuestos para fuentes switchings.
 
 
 
