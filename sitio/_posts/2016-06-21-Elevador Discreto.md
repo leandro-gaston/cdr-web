@@ -39,27 +39,31 @@ El elevador fue probado con baterías de Ion-Litio de 3.7V logrando tensiones de
 
 | COMP.			  |  ENCAPS.  | ESQUEMATICO  |  CANTIDAD|
 | :---: | :---: | :---: | :---: |
-| LM2577-ADJ	   | TO220-5	  | 	U1		 | 	  x 1	|
+| LM2577-ADJ	   | TO220-5   | 	U1		 | 	  x 1	|
 | Inductor 100 UH  | THRU HOLE | 	L1		 | 	  x 1	|
 | Diodo shotky     | THRU HOLE | 	L1		 | 	  x 1	|
 | Resistencia 2.2k | THRU HOLE | 	R2		 | 	  x 1	|
-| Capacitor 330nF  | LENTEJA	| 	C5		 | 	  x 1	|
+| Capacitor 330nF  | LENTEJA   | 	C5		 | 	  x 1	|
 | Capacitor 100nF  | SMD 1206  | 	C4		 | 	  x 1	|
-| Capacitor > 400uF | THRU HOLE | 	C2		 | 	  x 1	|
+| Capacitor > 400uF | THRU HOLE| 	C2		 | 	  x 1	|
 | Preset 10k       | BOURNE. TH| 	R1		 | 	  x 1	|
-| Resistencia 1k  | THRU HOLE | 	R3		 | 	  x 1	|
+| Resistencia 1k  | THRU HOLE  | 	R3		 | 	  x 1	|
 | Resistencia 1 ohm | THRU HOLE| 	R4		 | 	  x 1	|
 
 
 
 ### Para realizar la placa
 
-- Circuito (imprimir a escala): [PDF](https://www.dropbox.com/s/lirk5twed956w01/P012_Placa.pdf?dl=0)
+- Circuito (imprimir a escala): [PDF](https://dl.dropboxusercontent.com/s/lirk5twed956w01/P012_Placa.pdf?dl=0)
 
-- Esquemático: [PDF](https://www.dropbox.com/s/qpsxm90kpokhu8z/P012_Esquematico.pdf?dl=0)
+- Esquemático: [PDF](https://dl.dropboxusercontent.com/s/qpsxm90kpokhu8z/P012_Esquematico.pdf?dl=0)
 
-- Proyecto Altium: En git hub! [Link](https://github.com/ClubDeRobotica-UNLP/P012_ElevadorDiscreto).
+### Armado
 
+Pueden guiarse por las siguientes fotos para realizar el armado:
+
+<img src="/img/proy/P012/012_1.jpg" width="400" height="400">
+<img src="/img/proy/P012/012_2.jpg" width="400" height="400">
 
 
 ### Comentarios
