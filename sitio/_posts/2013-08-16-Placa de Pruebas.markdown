@@ -20,9 +20,9 @@ Placa de pruebas que permite probar funciones básicas de un ARDUINO UNO.
 
 ### Archivos
 
-- Circuito para imprimir (imprimir a escala): Tener en cuenta que los componenentes deben soldarse del mismo lado que se colocan. Esto se debe a que se utiliza una sola capa en vez de dos para mayor facilidad en la fabricación del circuito. [PDF](https://dl.dropboxusercontent.com/s/wkz7661o91zltlq/pcb_proy_00.pdf?dl=0)
+- Circuito para imprimir (imprimir a escala): Tener en cuenta que los componenentes deben soldarse del mismo lado que se colocan. Esto se debe a que se utiliza una sola capa en vez de dos para mayor facilidad en la fabricación del circuito. [PDF](https://www.dropbox.com/s/lpi1cfrgks5b84c/pcb_proy_00.pdf?dl=1)
 
-- Guía de armado: Fotos de la placa armada y ayuda para soldar los componentes. [PDF](https://dl.dropboxusercontent.com/s/n6v27hn8urwms1c/como_armar_proy_00.pdf?dl=0)
+- Guía de armado: Fotos de la placa armada y ayuda para soldar los componentes. [PDF](https://www.dropbox.com/s/3urphg1xagenarn/como_armar_proy_00.pdf?dl=1)
 
-- Guía para uso: Explicación para utilizar el shield con el Arduino. [PDF](https://dl.dropboxusercontent.com/s/w5bjppcz7hiuhac/guia_uso_proy_00.pdf?dl=0)
+- Guía para uso: Explicación para utilizar el shield con el Arduino. [PDF](https://www.dropbox.com/s/pkn7ybuhnuvux3c/guia_uso_proy_00.pdf?dl=1)
 

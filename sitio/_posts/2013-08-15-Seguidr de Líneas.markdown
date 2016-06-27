@@ -27,20 +27,20 @@ Este proyecto se compone de dos partes:
 
 ### Archivos
 
-- Informe del proyecto. [PDF](https://dl.dropboxusercontent.com/s/1x33dja8olgc6er/informe_proy_01.pdf)
+- Informe del proyecto. [PDF](https://www.dropbox.com/s/54yotg53a4hdbr8/informe_proy_01.pdf?dl=1)
 
 - Circuito shield de potencia (imprimir a escala):
-Este shield cuenta con dos capas, por lo que fabricarlo es un poco más difícil que en el caso de la placa de pruebas para Arduino que sólo tenía una capa. Aquí los links: [Capa TOP](https://dl.dropboxusercontent.com/s/tz06dyqpto85qmu/pcb_top_proy_01.pdf) | [Capa BOTTOM](https://dl.dropboxusercontent.com/s/38qy0eiv498911u/pcb_bottom_proy_01.pdf)
+Este shield cuenta con dos capas, por lo que fabricarlo es un poco más difícil que en el caso de la placa de pruebas para Arduino que sólo tenía una capa. Aquí los links: [Capa TOP](https://www.dropbox.com/s/7wt9kfpnbdp446b/pcb_top_proy_01.pdf?dl=1) | [Capa BOTTOM](https://www.dropbox.com/s/w3qnkszjikpjx8b/pcb_bottom_proy_01.pdf?dl=1)
 
-- Esquemático del shield ESQUEMATICO. [PDF](https://dl.dropboxusercontent.com/s/ex4jzy929y4zabg/esq_shield_proy_01.pdf)
+- Esquemático del shield ESQUEMATICO. [PDF](https://www.dropbox.com/s/bamt6iahl51myop/esq_shield_proy_01.pdf?dl=1)
 
-- Proyecto de Eagle del shield: Aquí está el proyecto completo en Eagle para los que deseen ver más en detalle o quieran realizar modificaciones. [RAR](https://dl.dropboxusercontent.com/s/17krcsmydh4k5oh/pcb_sensores_proy_01.pdf)
+- Proyecto de Eagle del shield: Aquí está el proyecto completo en Eagle para los que deseen ver más en detalle o quieran realizar modificaciones. [ZIP](https://www.dropbox.com/s/uhzk6drn5xy4t5y/shield_potencia_eagle_proy_01.zip?dl=1)
 
-- Circuito placa de sensores (imprimir a escala): Esta placa contempla tres sensores CNY70. [PDF](https://dl.dropboxusercontent.com/s/17krcsmydh4k5oh/pcb_sensores_proy_01.pdf)
+- Circuito placa de sensores (imprimir a escala): Esta placa contempla tres sensores CNY70. [PDF](https://www.dropbox.com/s/uwkenodcp9lsegr/pcb_sensores_proy_01.pdf?dl=1)
 
-- Esquemático de la placa de sensores. [PDF](https://dl.dropboxusercontent.com/s/wmivneh3lktiqed/esq_sensores_proy_01.pdf)
+- Esquemático de la placa de sensores. [PDF](https://www.dropbox.com/s/4tri1llx4i6mr6c/esq_sensores_proy_01.pdf?dl=1)
 
-- Proyecto de Eagle placa de sensores: Aquí está el proyecto completo en Eagle para los que deseen ver más en detalle o quieran realizar modificaciones. [RAR](https://dl.dropboxusercontent.com/s/mpt65yjjvibsbrb/tres_sensores_eagle_proy_01.zip)
+- Proyecto de Eagle placa de sensores: Aquí está el proyecto completo en Eagle para los que deseen ver más en detalle o quieran realizar modificaciones. [ZIP](https://www.dropbox.com/s/g5yregc44s37h4h/tres_sensores_eagle_proy_01.zip?dl=1)
 
 #### Notas:
 
