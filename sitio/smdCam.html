@@ -1,0 +1,34 @@
+---
+layout: page
+title: SMD Cam
+descripcion: "SMD Cam Feed"
+permalink: /smdCam/
+---
+<!-- <meta http-equiv="refresh" content="2"> -->
+
+<iframe name="frameName"
+		id="camFrame"
+		src="http://cdr.ing.unlp.edu.ar/smd_cam.jpg"
+		width="660" height="500"
+		style="float:center"
+		frame-border=5px
+		onload="start()">
+  <p>Tu coso no soporta iframes.</p>
+</iframe>
+
+<br></br>
+<br></br>
+
+<SCRIPT language="JavaScript" type="text/javascript">
+
+	function Start()
+	{
+		tmp = new Date();
+		tmp = "?"+tmp.getTime();
+		document.getElementById("camFrame").src="http://cdr.ing.unlp.edu.ar/smd_cam.jpg"+tmp;
+		setTimeout("Start()", 500)
+	}
+
+	Start();
+
+</SCRIPT> 
