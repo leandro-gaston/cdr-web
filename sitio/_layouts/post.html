@@ -12,19 +12,19 @@ table {
 
 th, td {
 	text-align: left;
-	font-size: 90%;	
+	font-size: 90%;
 	font-family: "roboto sans","Helvetica Neue",Helvetica,Arial;
     padding: 5px;
 }
 
 td {
-	border: 2px solid #ddd;    
+	border: 2px solid #ddd;
 }
 
 tr:nth-child(even){background-color: #f2f2f2}
 
 th {
-	
+
     background-color: #555;
     color: white;
 }
@@ -50,7 +50,7 @@ th {
 			{% if page.author %} • <span>{{ page.author }}</span>
 			{% endif %}
 		</p>
-		<hr style="border:dashed 1px #ddd">	
+		<hr style="border:dashed 1px #ddd">
 		<p class="post-header-desc">{{ page.descripcion }}</p>
 	  </div>
 
@@ -58,9 +58,9 @@ th {
 		<img src="{{ page.portada }}" height="300px" widht="auto"  >
 	  </div>
 
-	</div>	
+	</div>
 
-	<hr style="border:dashed 1px #ddd">	
+	<hr style="border:dashed 1px #ddd">
 
   <div class="page-content" itemprop="articleBody">
     {{ content }}
@@ -71,33 +71,29 @@ th {
 <ul type="none" style="">
 
 	{% if page.github != ''%}
-	<li style="margin-bottom:15px;"> 
+	<li style="margin-bottom:15px;">
 		Repositorio del proyecto en <a href="{{page.github}}">GitHub</a>
 	</li>
 	{% endif %}
 
 	{% if page.facebook != ''%}
-	<li style="margin-bottom:15px;"> 
+	<li style="margin-bottom:15px;">
 		Album de fotos en <a href="{{page.facebook}}">Facebook</a>
  	</li>
 	{% endif %}
-	
+
 	{% if page.youtube != ''%}
-	<li style="margin-bottom:15px;"> 
+	<li style="margin-bottom:15px;">
 		Videos en <a href="{{page.youtube}}">YouTube</a>
 	</li>
 	{% endif %}
 
-	{% if (page.github == "") %}
-		{% if (page.facebook == "") %}
-			{% if (page.youtube == "") %}
-				<li style="margin-bottom:15px;"> 
-					<i>Whoops! Nada por aqui...</i>
-				</li>
-			{% endif %}
-		{% endif %}
+	{% if page.github == "" and page.facebook == "" and page.youtube == "" %}
+		<li style="margin-bottom:15px;">
+			<i>Whoops! Nada por aqui...</i>
+		</li>
 	{% endif %}
-	
+
 <div style="height:50px">	</div>
 
 </article>
