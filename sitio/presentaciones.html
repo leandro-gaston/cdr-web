@@ -7,12 +7,12 @@ permalink: /presentaciones/
 	{% for postrecito in site.data.presentaciones %}
 		<div class="post_block">
 				<img src="{{ postrecito.img }}"/>
+				<a class="page-block-link"  title="{{ postre.descripcion }}" href="{{ postre.permalink }}"><span></span></a>
 				<div class="post_block_content">
 					<a class="post_block_link" href="{{ postrecito.link }}"><h2>{{ postrecito.titulo }}</h2></a>
-					
 					<p class="text-muted" style="margin-top:25px"> {{postrecito.desc}}</p>
 				</div>
 			</div>
-		<hr style="border:dashed 1px #ddd">	
-		
+		<hr style="border:dashed 1px #ddd">
+
 	{% endfor %}

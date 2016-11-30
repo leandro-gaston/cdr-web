@@ -95,13 +95,13 @@ h1, h2, h3, h4, h5, h6 {
 	position:fixed;
     min-width:75em;
     border-bottom: 2px solid white;
-    
+
     overflow:hidden;
 
 	-moz-box-shadow:    3px 3px 5px 6px #ccc;
 	-webkit-box-shadow: 3px 3px 5px 6px #ccc;
 	box-shadow:         3px 3px 15px 6px #ccc;
-	color: #{{ site.color.primary}};	
+	color: #{{ site.color.primary}};
 	z-index:100;
 }
 
@@ -116,7 +116,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav-logo{
 	margin-top:1em;
 	margin-left:10em;
-	float:left;	
+	float:left;
 }
 
 .nav-menu{
@@ -142,7 +142,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color:#333;
    	border-radius:10px 10px 0px 0px;
 	}
-	
+
 .nav-list a:hover,
 .nav-list a:focus {
     outline: 0;
@@ -152,7 +152,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .main_hello {
 	width:100%;
-	
+
 }
 
 /*		MAIN BLOCKS	*/
@@ -188,7 +188,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .block-link {
-  position:absolute; 
+  position:absolute;
   width:15.0em;
   height:10.8em;
   top:	-0.25em;
@@ -266,6 +266,15 @@ h1, h2, h3, h4, h5, h6 {
 	right:-7%;
 }
 
+.page-block-link {
+  position:absolute;
+  width:18.25em;
+  height:8.8em;
+  top:	0.65em;
+  left:	0.65em;
+  z-index: 1;
+}
+
 /*		CONTENIDO DE LOS POST	*/
 
 .post_block {
@@ -299,12 +308,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .post_block_content p {
 	font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
-	
+
 }
 
 .post_block_link {
 	color: #{{ site.color.secondary-dark }};
-	
+
 }
 
 .post_block_content a:hover,
@@ -314,7 +323,7 @@ h1, h2, h3, h4, h5, h6 {
 	border:none;
 	padding:0px;
 }
-	
+
 .post {
 	text-align:left;
 	display:block;
@@ -326,12 +335,12 @@ h1, h2, h3, h4, h5, h6 {
 .post-header
 {
   text-align:center;
-  margin-top:20px; 
+  margin-top:20px;
 }
 
 .post-header-content
 {
-  text-align:left; 
+  text-align:left;
   display:inline-block;
   float:left;
   height:300px;
@@ -350,7 +359,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .post-header-img
-{ 
+{
   vertical-align:top;
   display:inline-block;
   height:300px;
@@ -445,4 +454,3 @@ footer {
     border: solid 0px;
     padding: 0px;
 }
-

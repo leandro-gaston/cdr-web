@@ -9,10 +9,11 @@ permalink: /proyectos/
 		{% if postrecito.categoria == 'Proyecto' %}
 			<div class="post_block">
 				<img src="{{ postrecito.img }}"/>
+				<a class="page-block-link"  title="{{ postre.descripcion }}" href="{{ postre.permalink }}"><span></span></a>
 				<div class="post_block_content">
 					<a class="post_block_link" href="{{ postrecito.permalink }}"><h2> {{ postrecito.title }} </h2></a>
 					<p class="text-muted"> {{postrecito.descripcion}}	</p>
-					<p class="text-muted"> 
+					<p class="text-muted">
 						{% if postrecito.estado == 'Finalizado'%}
 						Estado: <span style="color:olive">{{postrecito.estado}} </span>
 						{% else %}
@@ -21,6 +22,6 @@ permalink: /proyectos/
 					</p>
 				</div>
 			</div>
-		<hr style="border:dashed 1px #ddd">	
+		<hr style="border:dashed 1px #ddd">
 		{% endif %}
 	{% endfor %}
