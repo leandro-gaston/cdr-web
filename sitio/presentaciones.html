@@ -7,7 +7,7 @@ permalink: /presentaciones/
 	{% for postrecito in site.data.presentaciones %}
 		<div class="post_block">
 				<img src="{{ postrecito.img }}"/>
-				<a class="page-block-link"  title="{{ postre.descripcion }}" href="{{ postre.permalink }}"><span></span></a>
+				<a class="page-block-link"  title="{{ postrecito.titulo }}" href="{{ postrecito.link }}"><span></span></a>
 				<div class="post_block_content">
 					<a class="post_block_link" href="{{ postrecito.link }}"><h2>{{ postrecito.titulo }}</h2></a>
 					<p class="text-muted" style="margin-top:25px"> {{postrecito.desc}}</p>

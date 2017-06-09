@@ -9,7 +9,7 @@ permalink: /proyectos/
 		{% if postrecito.categoria == 'Proyecto' %}
 			<div class="post_block">
 				<img src="{{ postrecito.img }}"/>
-				<a class="page-block-link"  title="{{ postre.descripcion }}" href="{{ postre.permalink }}"><span></span></a>
+				<a class="page-block-link"  title="{{ postrecito.title }}" href="{{ postrecito.permalink }}"><span></span></a>
 				<div class="post_block_content">
 					<a class="post_block_link" href="{{ postrecito.permalink }}"><h2> {{ postrecito.title }} </h2></a>
 					<p class="text-muted"> {{postrecito.descripcion}}	</p>
