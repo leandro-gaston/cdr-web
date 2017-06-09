@@ -1,0 +1,39 @@
+Proyecto 10: Driver para Brazo Robótico.
+
+Integrantes: Santiago Rodríguez
+
+Resumen:
+
+Este proyecto consiste en el driver para los motores de un brazo robótico. 
+El proyecto cuenta con tres doble-puente H que permiten controlar hasta 
+seis motores de continua en ambos sentidos.Esta placa se conecta con la 
+placa del controlador del brazo.
+
+
+Funcionamiento:
+
+Los doble puente H hacen de intermediarios entre la lógica de control y los 
+cinco motores del brazo. Las señales de control de cada puente H provienen 
+de la placa del controlador.
+
+
+Lista de componentes (ver fotos adjuntas):
+	
+Símbolo			Valor			Encapsulado
+	
+
+B1			Bornera dos terminales
+C1, C3, C5		100uF (25V)		Through hole
+C2, C4, C6		100nF			Through hole
+R1			220			SMD 1206
+R2, R3, R4		0			SMD 1206
+P1, P2, P3, P4, P5	Headers 1X2
+P8, P11, P12		Headers 1X4 (hembra)
+U1, U2, U3		L293DNE			DIP 16
+
+
+Notas
+
+* La alimentación de los motores debe ser de 3.7V.
+* Todos los componentes deben soldarse de ambos lados, además de las vías, excepto los conectores P8, P11 y P12.
+Esto indica que no se pueden utilizar sockets para los L293DNE.

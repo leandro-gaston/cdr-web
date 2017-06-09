@@ -1,0 +1,135 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+%\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[dvips]{graphicx}
+\usepackage{enumerate}
+
+\topmargin=-2cm
+\oddsidemargin=-1.2cm
+\textheight=25cm
+\textwidth=18.5cm
+
+%opening
+\title{\Huge{\textbf{Guía para el Proyecto 4: Seguidor de Luz}}}
+\author{Club de Robótica - FI - UNLP}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Objetivos de la guía}
+
+Se plantea un lineamiento general para la programación de un auto seguidor de luz, se supone que ya se cuenta con el auto así como sus sensores, control de motores y Arduino para programar.
+
+Este proyecto se puede separar en varios bloques los cuales se podrán programar independientemente con la idea de resolver tareas y problemas menos complejos, para que en conjunto, puedan servir a controlar el seguidor de luz. Algunos de estos grupos:
+
+\begin{itemize}
+	\item Alimentación de: Arduino y Motores.
+	\item Control: El control está dado por un Arduino UNO que comanda un doble puente H, el integrado L293D. El mismo controla por medio de dos pines cada motor. A su vez, al menos dos pines del Arduino que estén conectados al L293D deben contar con salida PWM.
+	\item Control de actuación según:
+		\begin{enumerate}
+			\item Lectura de sensores.
+			\item Manejo de motores.
+			\item Máquina de estados.
+		\end{enumerate}
+\end{itemize}
+
+\section{Planteo del control de actuación}
+
+\subsection*{Lectura de sensores}
+
+Como primera tarea a programar se propone realizar una lectura de los sensores.
+En esta aplicación se tendrá una lectura de un divisor de tensión en los cuales unas de las resistencias es un LDR. La lectura se realizara por medio del ADC de la placa Arduino.
+Es recomendable tener una noción de los valores arrojados en las mediciones, para lo cual se recomienda enviar estos datos por el puerto serie para visualizarlos.
+Se deberá asignar rangos de mediciones que representen los estados en los sensores como pueden ser:
+\begin{enumerate}
+	\item No luz.
+	\item Luz máxima.
+	\item Luz ambiente.
+\end{enumerate}
+
+Las mediciones anteriores serán las que definan los estados posibles con los que se podrá encontrar el seguidor y ante los cuales actuará.
+
+Se recomienda calcular los posibles valores que pueden llegar a dar las mediciones teniendo en cuenta los siguientes datos:
+\begin{itemize}
+	\item Resolución en bits del ADC (10 bits).
+	\item Tensión de alimentación del divisor de tensión (5V).
+	\item Valores de las resistencias del divisor: $4.7\ k\Omega$ y el LDR será del orden de los Mohm sin luz y del orden de los $4\ k\Omega$ con luz.
+\end{itemize}
+
+\subsection*{Manejo de motores}
+
+Imagine los movimientos que podría realizar el seguidor y realizar funciones para manejar los motores:
+\begin{itemize}
+	\item Adelante.
+	\item Atrás.
+	\item Giro derecha.
+	\item Giro izquierda.
+\end{itemize}
+
+Recordar cómo se conecta el Arduino al Shield de potencia, cómo funciona el puente H y cómo se generan las señales PWM con el Arduino.
+
+\subsection*{Máquina de estados}
+
+Este concepto puede resultar nuevo, pero es muy sencillo y aplicable en estos casos.
+Una máquina de estados está conformada por:
+\begin{itemize}
+	\item Entradas.
+	\item Salidas.
+	\item Estados intermedios.
+	\item Condiciones que se deben cumplir para pasar de un estado a otro.
+\end{itemize}
+
+En un seguidor de luz con dos sensores se podrá tener:
+
+\begin{enumerate}[A]
+	\item Luz en sensor derecho.
+	\item Luz en sensor izquierdo.
+	\item Luz en ambos sensores.
+	\item No luz en ambos sensores.
+\end{enumerate}
+
+Según el estado, será la tarea a realizar:
+
+\begin{enumerate}[A]
+	\item Se deberá girar hacia la derecha.
+	\item Se deberá girar hacia la izquierda.
+	\item Se deberá avanzar.
+	\item Se deberá detener.
+\end{enumerate}
+
+Implementación: Notar la utilización del condicional \textit{si}. Éste se puede implementar con funciones \textbf{if}, \textbf{if else}, \textbf{if else if}, o con \textbf{switch case}.\\
+
+Sentencia \textbf{if else}:
+\begin{verbatim}
+if(condición a cumplir){
+	tarea a realizar;
+	} 
+	else{
+		tarea a realizar;
+		}
+\end{verbatim}
+
+Sentencia \textbf{switch case}:
+
+\begin{verbatim}
+switch("variable"){
+	case "valor que puede tomar la variable":
+		tarea a realizar;
+	break;
+	case "valor que puede tomar la variable":
+		tarea a realizar;
+	break;}		
+
+\end{verbatim}
+
+
+Una vez resueltas las distintas etapas intentar relacionarlas a todas para lograr el propósito del dispositivo, en este caso: guiar el recorrido con una fuente de luz.
+
+
+
+\end{document}
