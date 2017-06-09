@@ -7,7 +7,7 @@ descripcion: "Primera versión de un elevador DC-DC para el club utilizando comp
 
 categoria: Proyecto					# Obligatorio. Como está.
 permalink: /proyectos/012/			# Obligatorio. XXX = Num del Proyecto
-estado: "En optimización"			# Obligatorio. "Finalizado" o lo que quieran. 
+estado: "En optimización"			# Obligatorio. "Finalizado" o lo que quieran.
 
 img: "/img/proy/012.jpg"			  # Obligatorio. XXX = Num del Proyecto
 portada: "/img/proy/portadas/012.jpg" # Obligatorio. XXX = Num del Proyecto
@@ -25,14 +25,15 @@ Primera versión de un elevador DC-DC para el club utilizando componentes discre
 
 ### Presentación
 
-Luego de búsqueda de componentes para realizar el elevador, se eligió el LM2577. Link hoja de datos:[link](http://www.ti.com.cn/cn/lit/ds/symlink/lm2577.pdf).  
+Luego de búsqueda de componentes para realizar el elevador, se eligió el LM2577. [Hoja de Datos](http://www.ti.com.cn/cn/lit/ds/symlink/lm2577.pdf)
+
 Sólo son necesarios unos pocos componentes: Capacitores, resistencias, un Diodo shotky y un inductor.
 
 ### Implementación
 
 El elevador se implementó en una pequeña placa de 3cm x 2.8 cm. Doble capa.  
 Fue diseñado con el mismo footprint que el módulo elevador de texas, el PTN04050CAD. Por lo tanto, es pin compatible con el motivo de intercambiarlos en caso de que sea necesario y usar siempre el mismo footprint. Cabe destacar, que este diseño al ser con componentes discretos es de mayor tamaño que el PTN04050CAD, aunque no por mucho.  
-El elevador fue probado con baterías de Ion-Litio de 3.7V logrando tensiones de hasta 9V inclusive. El proyecto de altium se encuentra disponible como así también los componentes con su footprint en la [librería de altium del club](https://www.dropbox.com/sh/wmws3nq52dmwwt4/AAC-t99zivPo3nt4TggKyeRVa?dl=0).
+El elevador fue probado con baterías de Ion-Litio de 3.7V logrando tensiones de hasta 9V inclusive. El proyecto de altium se encuentra disponible como así también los componentes con su footprint en la [Librería de Altium del Club](/files/proyectos/common/Altium_CDR_Lib.rar).
 
 
 #### Lista de componentes:
@@ -54,9 +55,9 @@ El elevador fue probado con baterías de Ion-Litio de 3.7V logrando tensiones de
 
 ### Para realizar la placa
 
-- Circuito (imprimir a escala): [PDF](https://dl.dropboxusercontent.com/s/lirk5twed956w01/P012_Placa.pdf?dl=0)
+- Circuito (imprimir a escala): [PDF](/files/proyectos/012/012_PCB.pdf)
 
-- Esquemático: [PDF](https://dl.dropboxusercontent.com/s/qpsxm90kpokhu8z/P012_Esquematico.pdf?dl=0)
+- Esquemático: [PDF](/files/proyectos/012/012_Esquematico.pdf)
 
 ### Armado
 
@@ -95,4 +96,3 @@ Pueden guiarse por las siguientes fotos para realizar el armado:
 
 
  - La resistencia R4 se coloca para prevenir sobrecorrientes si se utiliza el elevador para controlar, por ejemplo, motores de continua. El LM2577 posee una protección contra sobrecorrientes que causa que hasta que no se realice un power on no vuelve a funcionar. Para evitar esto, se coloca esta resistencia de 1 Ohm en serie con la salida del elevador.
-

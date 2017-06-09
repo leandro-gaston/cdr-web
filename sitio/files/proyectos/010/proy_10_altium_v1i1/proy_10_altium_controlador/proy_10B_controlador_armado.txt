@@ -1,0 +1,62 @@
+Proyecto 10: Controlador para Brazo Robótico con comunicación serial USB.
+
+Integrantes: Santiago Rodríguez
+
+Resumen:
+
+Este proyecto consiste en un controlador para el driver de un brazo robótico. 
+El proyecto cuenta con un microcontrolador y un integrado que implementa la 
+conversión UART-USB. Esta placa se conecta con la placa del driver del brazo 
+para controlarlo según el programa del microcontrolador.
+
+
+Funcionamiento:
+
+Las entradas/salidas del micro se encuentran conectadas a unos pines Header 
+que envían las señales a la placa del driver, donde están los puentes H que 
+controlan los motores del brazo. La placa cuenta además con un conector 
+para un módulo Bluetooth JY-MCU y otro para la IMU MPU-6050.
+Al conectar el cable USB a la placa, en la PC aparecerá un nuevo puerto COM 
+virtual, que representa la UART del micro. El micro puede programarse usando 
+la IDE "Energia", similar a la de Arduino.
+
+
+Lista de componentes (ver fotos adjuntas):
+	
+Símbolo		Valor			Encapsulado
+
+C3, C4		22pF			SMD1206
+C5, C6		10nF			SMD1206
+C1, C2, C7	4.7uF (25V)		Through hole
+R1, R13, R15	47k			SMD1206
+R2, R3, R18	220			SMD1206
+R4		90.9k			SMD1206
+R5		100k			SMD1206
+R10, R11	33			SMD1206
+R12, R17	32k			SMD1206
+R14		1.5k			SMD1206
+R16		15k			SMD1206
+D1		Común			SMD1206
+LED1,2 y 3	Rojo			SMD1206
+P1, P4, P7, P9	Headers 1X4 	
+P6		Headers 1X3	
+P2, P5		Headers 1X2
+P3, P11		Headers 1X4 (hembra)
+P8		Headers 1X2 (hembra)
+Y1		Cristal 12 MHz		Through hole
+U1		MSP430G2553		PW20
+U2		TUSB3410		TQFP32
+REG1		LP38693MP		SOT223-5	
+Pulsador	Cuatro terminales	Through hole
+Conector USB	Tipo B hembra
+
+
+Notas
+
+* Como la placa es doble capa y posee vías, deben soldarse cablecitos 
+de ambos lados de la placa antes de colocar los componentes.
+* La alimentación de la placa se realiza por medio del cable USB.
+* Notar que algunos conectores Header se sueldan al revés, para que 
+conecten con la placa del driver que va abajo de esta.
+* El micro puede programarse con la placa de desarrollo "Launchpad", 
+conectando las señales correspondientes al conector P1.

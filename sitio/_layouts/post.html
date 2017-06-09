@@ -66,32 +66,30 @@ th {
     {{ content }}
   </div>
 
-<h3>Links </h3>
+	{% if page.github != "" or page.facebook != "" or page.youtube != "" %}
 
-<ul type="none" style="">
+		<h3>Links </h3>
 
-	{% if page.github != ''%}
-	<li style="margin-bottom:15px;">
-		Repositorio del proyecto en <a href="{{page.github}}">GitHub</a>
-	</li>
-	{% endif %}
+		<ul type="none" style="">
 
-	{% if page.facebook != ''%}
-	<li style="margin-bottom:15px;">
-		Album de fotos en <a href="{{page.facebook}}">Facebook</a>
- 	</li>
-	{% endif %}
-
-	{% if page.youtube != ''%}
-	<li style="margin-bottom:15px;">
-		Videos en <a href="{{page.youtube}}">YouTube</a>
-	</li>
-	{% endif %}
-
-	{% if page.github == "" and page.facebook == "" and page.youtube == "" %}
+		{% if page.github != ''%}
 		<li style="margin-bottom:15px;">
-			<i>Whoops! Nada por aqui...</i>
+			Repositorio del proyecto en <a href="{{page.github}}">GitHub</a>
 		</li>
+		{% endif %}
+
+		{% if page.facebook != ''%}
+		<li style="margin-bottom:15px;">
+			Album de fotos en <a href="{{page.facebook}}">Facebook</a>
+	 	</li>
+		{% endif %}
+
+		{% if page.youtube != ''%}
+		<li style="margin-bottom:15px;">
+			Videos en <a href="{{page.youtube}}">YouTube</a>
+		</li>
+		{% endif %}
+
 	{% endif %}
 
 <div style="height:50px">	</div>

@@ -6,7 +6,7 @@ descripcion: "Este proyecto permite la comunicación entre una PC y un dispositi
 
 categoria: Proyecto				# Obligatorio. Como está.
 permalink: /proyectos/013/			# Obligatorio. XXX = Num del Proyecto
-estado: "Finalizado"			# Obligatorio. "Finalizado" o lo que quieran. 
+estado: "Finalizado"			# Obligatorio. "Finalizado" o lo que quieran.
 
 img: "/img/proy/013.jpg"			# Obligatorio. XXX = Num del Proyecto
 portada: "/img/proy/portadas/013.png"		# Obligatorio. XXX = Num del Proyecto
@@ -27,17 +27,17 @@ A excepción de un regulador de tensión, sólo son necesarios unos pocos compon
 
 Para el diseño se buscó que el prototipo sea lo más pequeño posible pero también que el circuito pueda ser construído a mano con métodos caseros. También se apuntó a una forma tipo "stick", es decir que se conecta directamente a un puerto USB tipo A de una PC convencional. De allí recibe alimentación y mediante unos cables con conectores apropiados, interfacea con el dispositivo elegido para comunicación: microcontrolador, sensor, gps, etc. Además, posee un regulador con la capacidad de corriente suficiente para alimentar dispositivos de bajo consumo como sensores, IMUs, etc. , por lo que cuenta con dos salidas de alimentación de 3.3 V.
 
-El circuito se implementó en una pequeña placa de 2.4cm x 6.7 cm. Doble capa. 
+El circuito se implementó en una pequeña placa de 2.4cm x 6.7 cm. Doble capa.
 
 El conversor ha sido testeado con diversos dispositivos entregando buenos resultados. Fue testeado hasta un baudrate de 115200 exitosamente.
 
-El proyecto de altium se encuentra disponible como así también los componentes con su footprint en la [librería de altium del club](https://www.dropbox.com/sh/wmws3nq52dmwwt4/AAC-t99zivPo3nt4TggKyeRVa?dl=0).
+El proyecto de altium se encuentra disponible como así también los componentes con su footprint en la [Librería de Altium del Club](/files/proyectos/common/Altium_CDR_Lib.rar).
 
 ### Para realizar la placa
 
-- Circuito (imprimir a escala): [PDF](https://dl.dropboxusercontent.com/s/psgen0q4ey546eo/P013_Placa.pdf?dl=0)
+- Circuito (imprimir a escala): [PDF](/files/proyectos/013/013_PCB.pdf)
 
-- Esquemático: [PDF](https://dl.dropboxusercontent.com/s/8ts3dcxr6adlgtw/P013_Esquematico.pdf?dl=0)
+- Esquemático: [PDF](/files/proyectos/013/013_Esquematico.pdf)
 
 ### Lista de componentes:
 
@@ -76,27 +76,3 @@ Pueden guiarse por las siguientes fotos para realizar el armado:
  - Ver las limitaciones de potencia del regulador REG1 en su hoja de datos!!
 
  - Este conversor puede suplantar a los módulos "ftdi" que son conversores USB-UART.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
