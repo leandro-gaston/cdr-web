@@ -14,16 +14,18 @@ baseurl: ""
 url: "cdr.ing.unlp.edu.ar" # the base hostname & protocol for your site
 
 social:
-  - title: twitter
-    url: http://twitter.com/cdrunlp
   - title: facebook
     url: https://www.facebook.com/cdrunlp
+  - title: instagram
+    url: https://instagram.com/cdrunlp
   - title: youtube
-    url: http://www.youtube.com/cdrunlp
+    url: https://www.youtube.com/cdrunlp
+  - title: twitter
+    url: https://twitter.com/cdrunlp
   - title: github
     url: https://github.com/orgs/ClubDeRobotica-UNLP/
   - title: SMD Cam
-    url: http://163.10.11.161:25000
+    url: https://163.10.11.161:25000
 
 # Postal address (add as many lines as necessary)
 address:
