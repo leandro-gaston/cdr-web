@@ -25,7 +25,7 @@ social:
   - title: github
     url: https://github.com/orgs/ClubDeRobotica-UNLP/
   - title: SMD Cam
-    url: https://163.10.11.161:25000
+    url: http://163.10.11.161:25000
 
 # Postal address (add as many lines as necessary)
 address:
