@@ -1,4 +1,4 @@
--27/05/16-
+﻿-27/05/16-
 ------------------------------------------------------------
 
 INSTRUCCIONES PARA AGREGAR CONTENIDO AL SITIO DEL CLUB:
@@ -138,5 +138,14 @@ Novedades y Avisos
 
  Cuando lo implemente les digo =P
 
+
+9/04/2019-----------------------------------------lucas
+Para proceder con la carga del sitio:
+1. Instalar Jekyll, sitio recomendado https://jekyllrb.com/docs/installation/windows/
+2. Desde un Shell o terminal ir al directorio de trabajo  /cdr-web/sitio
+3. Ejecutar jekyll s esto ejecuta un servidor web local, con lo cual desde localhost:xxxx (el puerto lo presenta el servicio de jekyll, verificar
+) se puede ver un preview de la pagina para verificar las modificaciones.
+4. Verificados los cambios subir el contenido al servidor. HACER BACKUP PREVIAMNTE EN LA CARPETA "BU"
+5. FIN
 ------------------------------------------------------------
 													- Rev.A-
