@@ -57,3 +57,9 @@
   fecha:	""
   img:		"/img/pres/pres_010.jpg"
   link:		"/files/presentaciones/010_ Introduccion a Git.pdf"
+
+- titulo:	"11 - Seminario/curso/workshop ROS"
+  desc:		"Workshop e introducción a sistema operativo ROS. Créditos: Dr. Juan Rosendo."
+  fecha:	""
+  img:		"/img/pres/ros-logo.png"
+  link:		"/files/presentaciones/011_ROS.zip"
