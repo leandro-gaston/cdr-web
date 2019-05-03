@@ -16,7 +16,7 @@ El repositorio contiene los archivos para la generación del sitio web del club.
 
 Desde una consola de comandos:
 
-- git clone https://github.com/ClubDeRobotica-UNLP/cdr-web.git
+- git clone https://github.com/cdrfiunlp/cdr-web.git
 - cd cdr-web
 - git checkout -b "NombreDeLaNuevaRama"
 - Seguir las indicaciones del archivo "instrucciones/instrucciones.txt"
