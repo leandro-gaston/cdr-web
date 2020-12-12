@@ -63,3 +63,9 @@
   fecha:	""
   img:		"/img/pres/ros-logo.png"
   link:		"/files/presentaciones/011_ROS.zip"
+  
+  - titulo:	"12 - Python con Raspberry pi 3"
+  desc:		"Curso introductorio a Python usando las Raspeberry pi 3. Créditos: Leandro Gaston Vazquez."
+  fecha:	""
+  img:		"/img/pres/ros-logo.png"
+  link:		"/files/presentaciones/011_ROS.zip"
