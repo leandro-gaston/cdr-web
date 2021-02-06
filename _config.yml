@@ -1,0 +1,51 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Club de Robótica - FI UNLP
+email: cdr.fiunlp@gmail.com
+description: "La misión del Club es la de fomentar la aplicación práctica de los conocimientos adquiridos a lo largo de la carrera de Ing. Electrónica, con el fin de desarrollar dispositivos y 	prototipos de robótica trabajando en equipo con otros estudiantes de la carrera, estableciendo objetivos, metas y fijando plazos para los mismos."
+
+baseurl: ""
+url: "cdr.ing.unlp.edu.ar" # the base hostname & protocol for your site
+
+social:
+  - title: facebook
+    url: https://www.facebook.com/cdrfiunlp
+  - title: instagram
+    url: https://instagram.com/cdrfiunlp
+  - title: youtube
+    url: https://www.youtube.com/cdrunlp
+  - title: twitter
+    url: https://twitter.com/cdrfiunlp
+  - title: whatsapp
+    url: https://chat.whatsapp.com/G0KyPT0Tf4qJ31uoT66fE1
+  - title: github
+    url: https://github.com/cdrfiunlp/
+  - title: SMD Cam
+    url: http://163.10.11.161:25000
+
+# Postal address (add as many lines as necessary)
+address:
+  - line: Departamento de Electrotecnia
+  - line: Facultad de Ingeniería
+  - line: La Plata, Buenos Aires, Argentina
+
+# Color settings (hex-codes without the leading hash-tag)
+color:
+
+  primary: e4b102
+  secondary: fec503
+  secondary-dark: 333
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+syntax-highlighting:
+  enabled : true
+  css: syntax.css

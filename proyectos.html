@@ -1,0 +1,27 @@
+---
+layout: page
+title: Proyectos
+descripcion: A continuación encontrará los distintos proyectos activos y completados del Club, junto con toda la documentación, imagenes y videos de los mismos. Si querés proponer un proyecto no dudes en <a href="#contacto"> contactarnos</a>.
+permalink: /proyectos/
+---
+
+	{% for postrecito in site.posts reversed %}
+		{% if postrecito.categoria == 'Proyecto' %}
+			<div class="post_block">
+				<img src="{{ postrecito.img }}"/>
+				<a class="page-block-link"  title="{{ postrecito.title }}" href="{{ postrecito.permalink }}"><span></span></a>
+				<div class="post_block_content">
+					<a class="post_block_link" href="{{ postrecito.permalink }}"><h2> {{ postrecito.title }} </h2></a>
+					<p class="text-muted"> {{postrecito.descripcion}}	</p>
+					<p class="text-muted">
+						{% if postrecito.estado == 'Finalizado'%}
+						Estado: <span style="color:olive">{{postrecito.estado}} </span>
+						{% else %}
+						Estado: <span style="color:red">{{postrecito.estado}} </span>
+						{% endif %}
+					</p>
+				</div>
+			</div>
+		<hr style="border:dashed 1px #ddd">
+		{% endif %}
+	{% endfor %}
