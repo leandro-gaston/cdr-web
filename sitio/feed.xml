@@ -1,30 +1,591 @@
----
-layout: null
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.title | xml_escape }}</title>
-    <description>{{ site.description | xml_escape }}</description>
-    <link>{{ site.url }}{{ site.baseurl }}/</link>
-    <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
-    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-    <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% for post in site.posts limit:10 %}
+    <title>Club de Robótica - FI UNLP</title>
+    <description>La misión del Club es la de fomentar la aplicación práctica de los conocimientos adquiridos a lo largo de la carrera de Ing. Electrónica, con el fin de desarrollar dispositivos y 	prototipos de robótica trabajando en equipo con otros estudiantes de la carrera, estableciendo objetivos, metas y fijando plazos para los mismos.</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 05 Feb 2021 22:45:29 -0300</pubDate>
+    <lastBuildDate>Fri, 05 Feb 2021 22:45:29 -0300</lastBuildDate>
+    <generator>Jekyll v4.1.1</generator>
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.content | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
-        {% for tag in post.tags %}
-        <category>{{ tag | xml_escape }}</category>
-        {% endfor %}
-        {% for cat in post.categories %}
-        <category>{{ cat | xml_escape }}</category>
-        {% endfor %}
+        <title>[P014] cdrPrinter</title>
+        <description>&lt;p&gt;Primera versión de una impresora 3D para el CDR. Proyecto cdrPrinter, alias “Pinocho”.&lt;/p&gt;
+
+&lt;h3 id=&quot;presentación&quot;&gt;Presentación&lt;/h3&gt;
+
+&lt;p&gt;La idea surgió a fines de 2015. Se propuso generar una impresora 3D con estructura similar a la de este &lt;a href=&quot;http://www.mydiycnc.com/&quot;&gt;proyecto&lt;/a&gt; utilizando varillas y maderas recicladas.&lt;/p&gt;
+
+&lt;h3 id=&quot;implementación-estructural-y-mecánica&quot;&gt;Implementación estructural y mecánica&lt;/h3&gt;
+
+&lt;p&gt;Lo primero a realizar fue el diseño de la estructura mecánica con las piezas requeridas. Para ello, se utilizó un programa de CAD 3D en el cual se diseñó cada pieza independientemente y luego se las integró en un mismo ensamblaje con las relaciones de posición adecuadas, tal cual se verían en la realidad.&lt;/p&gt;
+
+&lt;p&gt;Para el eje x se utilizó una madera de 40 cm x 37 cm. En ella se ubicaron 4 sostiene varillas, amuradas a la madera con dos tornillos cada una. Las varillas utilizadas para el desplazamiento de los carros fueron de 12 y 10 mm de diámetro. Se diseñó y se mandó a cortar en láser una superficie que haga de carro del eje x, de las dimensiones adecuadas para que la cama caliente de una impresora 3D típica (20cm x 20cm) pueda acoplarse sin problemas. Para el movimiento del carro se utilizó un motor con correa dentada, necesitando piezas de sostén del motor en un extremo y una pieza de sostén para una rueda libre en el otro. Para tensar la correa se colocó una pieza debajo de la madera MDF del carro. El carro se desplaza sobre las varillas utilizando rodamientos lineales, por lo que se diseñaron piezas tipo receptáculo para dichos rodamientos. En la siguiente Figura se muestra un render 3D del diseño del eje x completo.&lt;/p&gt;
+
+&lt;center&gt;
+&lt;img src=&quot;/img/proy/P014/ejex.png&quot; width=&quot;900&quot; /&gt;
+&lt;/center&gt;
+
+&lt;p&gt;Para el eje z se utilizó una estructura de maderas, a modo de arco. A diferencia de algunas impresoras (como las Prusa 3i) que tienen los motores apoyados en la base de la impresora, se decidió colocar los motores del eje z sobre el travesaño de la impresora. Para ello, se diseñaron una pieza que sujetara el motor al travesaño y se replicó para el otro lado. En cada pieza se colocó una varilla de 10 mm de diámetro y de 35 cm de largo. Dichas varillas apoyan sobre unas maderas de MDF cortadas a láser que facilitan su correcta alineación vertical. De los motores surgen varillas roscadas de 5 mm, sujetas a los mismos con acoples lineales. Finalmente, este eje cuenta con dos piezas que se mueven hacia abajo o arriba, de forma nivelada, que forman parte de lo que es el eje y de la impresora. A continuación se muestra un render 3D del diseño del eje z completo.&lt;/p&gt;
+
+&lt;center&gt;
+&lt;img src=&quot;/img/proy/P014/ejez.png&quot; width=&quot;900&quot; /&gt;
+&lt;/center&gt;
+
+&lt;p&gt;El eje y consiste básicamente en un carro que debe sujetar al hot-end, que es el encargado de derretir el filamento de plástico. El carro, implementado en una pieza diseñada específicamente, utiliza para su deplazamiento una correa al igual que el eje x y dos varillas de 10 mm de diámetro. El carro cuenta con compartimientos para 3 rodamientos lineales y una extensión de plástico para tensar la correa adecuadamente. El eje y se encuentra graficado a continuación.&lt;/p&gt;
+
+&lt;center&gt;
+&lt;img src=&quot;/img/proy/P014/ejey.png&quot; width=&quot;900&quot; /&gt;
+&lt;/center&gt;
+
+&lt;h3 id=&quot;hot-end-extrusor-y-cama-caliente&quot;&gt;Hot-end, extrusor y cama caliente&lt;/h3&gt;
+
+&lt;p&gt;Uno de los elementos fundamentales de una impresora 3D es el hot-end. Es el encargado de derretir el filamento de plástico para crear una pieza 3D.  Para ello porta una resistencia calefactora y una unidad refrigerante, en general un ventilador. Un agregado en la unidad refrigerante del hot-end que mejora la calidad de las piezas es lo que se conoce como “fan de capa”. Básicamente son ventiladores comandados por la unidad de control de la impresora que refrigeran levemente la capa impresa por el hot-end para lograr una mejor terminación de la pieza. Actualmente la cdrPrinter utiliza un modelo similar a &lt;a href=&quot;https://www.thingiverse.com/thing:2131351&quot;&gt;este&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;El extrusor es el encargado de proveer al hot-end del plástico necesario a la velocidad apropiada. Para ello, cuenta con un motor paso a paso que mueve el rollo de filamento la cantidad justa para que el hot-end tenga un flujo continuo de plástico y pueda crear piezas de buena calidad. Hay dos grandes clases de extrusores: directos o indirectos. Los directos se colocan sobre el carro que porta al hot-end mientras que los indirectos se colocan sobre alguna superficie de la estructura de la impresora y se conectan al hot-end a través de una manguera, en general de teflón. En el caso de nuestra impresora, la misma utiliza &lt;a href=&quot;https://www.thingiverse.com/thing:1359717&quot;&gt;este&lt;/a&gt; extrusor de tipo indirecto.&lt;/p&gt;
+
+&lt;p&gt;La cama caliente sirve de superficie para la creación de la pieza 3D. Su temperatura es regulada desde la electrónica de control de la impresora. La temperatura de la cama varía según el tipo de filamento (ABS, PLA, etc) y según el número de capa.&lt;/p&gt;
+
+&lt;h3 id=&quot;electrónica-de-control-y-alimentación&quot;&gt;Electrónica de control y alimentación&lt;/h3&gt;
+
+&lt;p&gt;Para el control de la impresora se utilizó un Arduino Mega en conjunto con un shield RAMPS 1.4. El shield mencionado posee conexiones para la resistencia calefactora, para la cama caliente, para los motores, para los fines de carrera además de otras conexiones para dispositivos auxiliares (display, tarjeta SD, etc). Los drivers utilizados por los motores fueron los DRV8825. Los fines de carrera utilizados fueron obtenidos de fotocopiadoras en desuso, y se acoplaron a cada eje utilizando piezas diseñadas apropiadamente. La impresora es controlada por una PC, utilizando un software slicer a través de un cable USB tipo B, no teniendo la opción de utilizar una tarjeta SD. El Arduino con su shield fueron ensamblados dentro de una caja contenedora, que permite mantener el cableado de manera prolija y guardar de la suciedad a la electrónica. Para ello, se utilizó un modelo disponible en la &lt;a href=&quot;https://www.thingiverse.com/thing:1640870&quot;&gt;web&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Para la alimentación de los motores y de la resistencia calefactora del hot-end se utilizó una fuente de PC reciclada. La tensión de alimentación utilizada fue de 12 V. Para alimentar la cama caliente se utilizó otra fuente de PC reciclada debido a que el consumo necesario excedía la capacidad de una sola de las fuentes disponibles.&lt;/p&gt;
+
+&lt;h3 id=&quot;conclusiones-y-resultados&quot;&gt;Conclusiones y resultados&lt;/h3&gt;
+
+&lt;p&gt;La impresora se encuentra operativa desde mediados de 2016 aunque a partir de 2017 es que cuenta con todas las mejoras mencionadas en este post. Es utilizada para proyectos del CDR, para la construcción de proyectos de robótica. A continuación, algunas creaciones de la impresora.&lt;/p&gt;
+
+&lt;center&gt;
+&lt;img src=&quot;/img/proy/P014/creaciones.jpg&quot; width=&quot;900&quot; /&gt;
+&lt;img src=&quot;/img/proy/P014/creaciones2.jpg&quot; width=&quot;900&quot; /&gt;
+&lt;img src=&quot;/img/proy/P014/creaciones3.jpg&quot; width=&quot;900&quot; /&gt;
+&lt;/center&gt;
+
+&lt;p&gt;Cualquier interesado puede acercarnos su consulta o acercarse a la oficina del CDR para verla en funcionamiento.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 05 Sep 2017 17:49:00 -0300</pubDate>
+        <link>http://localhost:4000/proyectos/014/</link>
+        <guid isPermaLink="true">http://localhost:4000/proyectos/014/</guid>
+        
+        
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>[P013] Stick USB-UART</title>
+        <description>&lt;p&gt;Primera versión de un conversor USB-UART para el club utilizando componentes discretos.&lt;/p&gt;
+
+&lt;h3 id=&quot;presentación&quot;&gt;Presentación&lt;/h3&gt;
+
+&lt;p&gt;Luego de búsqueda de componentes para realizar el conversor, se eligió el &lt;a href=&quot;http://www.ti.com.cn/cn/lit/ds/symlink/tusb3410.pdf&quot;&gt;TUSB3410&lt;/a&gt;.&lt;br /&gt;
+A excepción de un regulador de tensión, sólo son necesarios unos pocos componentes sencillos de conseguir: Capacitores, resistencias, leds y un diodo.&lt;/p&gt;
+
+&lt;h3 id=&quot;implementación&quot;&gt;Implementación&lt;/h3&gt;
+
+&lt;p&gt;Para el diseño se buscó que el prototipo sea lo más pequeño posible pero también que el circuito pueda ser construído a mano con métodos caseros. También se apuntó a una forma tipo “stick”, es decir que se conecta directamente a un puerto USB tipo A de una PC convencional. De allí recibe alimentación y mediante unos cables con conectores apropiados, interfacea con el dispositivo elegido para comunicación: microcontrolador, sensor, gps, etc. Además, posee un regulador con la capacidad de corriente suficiente para alimentar dispositivos de bajo consumo como sensores, IMUs, etc. , por lo que cuenta con dos salidas de alimentación de 3.3 V.&lt;/p&gt;
+
+&lt;p&gt;El circuito se implementó en una pequeña placa de 2.4cm x 6.7 cm. Doble capa.&lt;/p&gt;
+
+&lt;p&gt;El conversor ha sido testeado con diversos dispositivos entregando buenos resultados. Fue testeado hasta un baudrate de 115200 exitosamente.&lt;/p&gt;
+
+&lt;p&gt;El proyecto de altium se encuentra disponible como así también los componentes con su footprint en la &lt;a href=&quot;/files/proyectos/common/Altium_CDR_Lib.rar&quot;&gt;Librería de Altium del Club&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;para-realizar-la-placa&quot;&gt;Para realizar la placa&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Circuito (imprimir a escala): &lt;a href=&quot;/files/proyectos/013/013_PCB.pdf&quot;&gt;PDF&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Esquemático: &lt;a href=&quot;/files/proyectos/013/013_Esquematico.pdf&quot;&gt;PDF&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;lista-de-componentes&quot;&gt;Lista de componentes:&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;COMP.&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;ENCAPS.&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;ESQUEMATICO&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;CANTIDAD&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;TUSB3410&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;TQFP-32&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;U1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;x 1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;LP38693MP-3.3&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;SOT223-5&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;REG1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;x 1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Cristal 12 MHz&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;THRU HOLE&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Y1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;x 1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Diodo 1N4xxx&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;SMD 1206&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;D1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;x 1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;LED&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;SMD 1206&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;C5&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;x 1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Capacitor 4.7uF&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;THRU HOLE&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;C1,C2,C5&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;x 3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Capacitor 33pF&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;SMD 1206&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;C3,C4&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;x 2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Capacitor 10nF&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;SMD 1206&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;C6,C7&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;x 2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Resistencia 47k&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;SMD 1206&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;R1,R3&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;x 2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Resistencia 1.5k&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;SMD 1206&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;R2&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;x 1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Resistencia 10k&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;SMD 1206&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;R4&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;x 1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Resistencia 12k&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;SMD 1206&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;R5&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;x 1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Resistencia 15k&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;SMD 1206&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;R6&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;x 1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Resistencia 32k&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;SMD 1206&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;R7&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;x 1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Resistencia 220&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;SMD 1206&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;R8&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;x 1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Resistencia 33&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;SMD 1206&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;R10, R11&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;x 2&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;armado&quot;&gt;Armado&lt;/h3&gt;
+
+&lt;p&gt;Pueden guiarse por las siguientes fotos para realizar el armado:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/proy/P013/013_1.jpg&quot; width=&quot;600&quot; height=&quot;300&quot; /&gt;
+&lt;img src=&quot;/img/proy/P013/013_2.jpg&quot; width=&quot;600&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;comentarios&quot;&gt;Comentarios&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Alinear con cuidado cada capa del circuito la momento de realizar la placa.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Deben soldarse cablecitos para las vías. Tener en cuenta antes de soldar los componentes.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Ver las limitaciones de potencia del regulador REG1 en su hoja de datos!!&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Este conversor puede suplantar a los módulos “ftdi” que son conversores USB-UART.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 22 Jun 2016 17:00:00 -0300</pubDate>
+        <link>http://localhost:4000/proyectos/013/</link>
+        <guid isPermaLink="true">http://localhost:4000/proyectos/013/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>[P012] Elevador Discreto</title>
+        <description>&lt;p&gt;Primera versión de un elevador DC-DC para el club utilizando componentes discretos.&lt;/p&gt;
+
+&lt;h3 id=&quot;presentación&quot;&gt;Presentación&lt;/h3&gt;
+
+&lt;p&gt;Luego de búsqueda de componentes para realizar el elevador, se eligió el LM2577. &lt;a href=&quot;http://www.ti.com.cn/cn/lit/ds/symlink/lm2577.pdf&quot;&gt;Hoja de Datos&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Sólo son necesarios unos pocos componentes: Capacitores, resistencias, un Diodo shotky y un inductor.&lt;/p&gt;
+
+&lt;h3 id=&quot;implementación&quot;&gt;Implementación&lt;/h3&gt;
+
+&lt;p&gt;El elevador se implementó en una pequeña placa de 3cm x 2.8 cm. Doble capa.&lt;br /&gt;
+Fue diseñado con el mismo footprint que el módulo elevador de texas, el PTN04050CAD. Por lo tanto, es pin compatible con el motivo de intercambiarlos en caso de que sea necesario y usar siempre el mismo footprint. Cabe destacar, que este diseño al ser con componentes discretos es de mayor tamaño que el PTN04050CAD, aunque no por mucho.&lt;br /&gt;
+El elevador fue probado con baterías de Ion-Litio de 3.7V logrando tensiones de hasta 9V inclusive. El proyecto de altium se encuentra disponible como así también los componentes con su footprint en la &lt;a href=&quot;/files/proyectos/common/Altium_CDR_Lib.rar&quot;&gt;Librería de Altium del Club&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;lista-de-componentes&quot;&gt;Lista de componentes:&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;COMP.&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;ENCAPS.&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;ESQUEMATICO&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;CANTIDAD&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;LM2577-ADJ&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;TO220-5&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;U1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;x 1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Inductor 100 UH&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;THRU HOLE&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;L1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;x 1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Diodo shotky&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;THRU HOLE&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;L1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;x 1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Resistencia 2.2k&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;THRU HOLE&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;R2&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;x 1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Capacitor 330nF&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;LENTEJA&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;C5&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;x 1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Capacitor 100nF&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;SMD 1206&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;C4&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;x 1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Capacitor &amp;gt; 400uF&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;THRU HOLE&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;C2&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;x 1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Preset 10k&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;BOURNE. TH&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;R1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;x 1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Resistencia 1k&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;THRU HOLE&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;R3&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;x 1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Resistencia 1 ohm&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;THRU HOLE&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;R4&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;x 1&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;para-realizar-la-placa&quot;&gt;Para realizar la placa&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Circuito (imprimir a escala): &lt;a href=&quot;/files/proyectos/012/012_PCB.pdf&quot;&gt;PDF&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Esquemático: &lt;a href=&quot;/files/proyectos/012/012_Esquematico.pdf&quot;&gt;PDF&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;armado&quot;&gt;Armado&lt;/h3&gt;
+
+&lt;p&gt;Pueden guiarse por las siguientes fotos para realizar el armado:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/proy/P012/012_1.jpg&quot; width=&quot;400&quot; height=&quot;400&quot; /&gt;
+&lt;img src=&quot;/img/proy/P012/012_2.jpg&quot; width=&quot;400&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;comentarios&quot;&gt;Comentarios&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Deben soldarse cablecitos para las vías. Tener en cuenta antes de soldar los componentes.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Ver las limitaciones de potencia del integrado en su hoja de datos!! Puede colocarse un disipador para estirar un poco más el rango de uso.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Los capacitores se consiguen fácilmente. Lo más importante es colocar un capacitor considerablemente grande en la tensión de salida, de alrededor de 680 uF.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;El diodo shotky puede conseguirse en formato SMD, generalmente tamaño 1206 o 3528 de una mother de una PC. Se encuentran cerca de los reguladores de tensión switching de la mother (&lt;a href=&quot;http://g01.a.alicdn.com/kf/HTB19wdvIXXXXXXdXXXXq6xXFXXXU/Env&amp;iacute;o-gratuito-One-lote-100-unids-SMA-SS14-1N5819-IN5819-Schottky-diodo.jpg&quot;&gt;Ver foto&lt;/a&gt;). Si no, puede llegar a comprarse alguno en una tienda de repuestos para fuentes switchings.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;El inductor, de igual manera puede obtenerse de una mother. Puede ser SMD, en general de tamaño 2020 o más grande. O puede ser thru hole, de distinto footprint aunque son parecidas a &lt;a href=&quot;http://img.directindustry.com/images_di/photo-m/124023-7954539.jpg&quot;&gt;esta foto&lt;/a&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Las resistencias se utilizan para el feedback de tensión. Pueden colocarse dos fijas para tensión fija o una fija y un potenciómetro reemplazando a la segunda.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;La resistencia R4 se coloca para prevenir sobrecorrientes si se utiliza el elevador para controlar, por ejemplo, motores de continua. El LM2577 posee una protección contra sobrecorrientes que causa que hasta que no se realice un power on no vuelve a funcionar. Para evitar esto, se coloca esta resistencia de 1 Ohm en serie con la salida del elevador.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 21 Jun 2016 15:07:00 -0300</pubDate>
+        <link>http://localhost:4000/proyectos/012/</link>
+        <guid isPermaLink="true">http://localhost:4000/proyectos/012/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>[P009] Cargador de Baterías</title>
+        <description>&lt;p&gt;Cargador de baterías de Li-Ion. Este proyecto consiste en un cargador de baterías de celulares de Li Ion. Se ofrece la posibilidad de cargar una sola batería, o dos en serie. El integrado principal es el &lt;a href=&quot;http://www.ti.com/lit/ds/symlink/bq2057w.pdf&quot;&gt;BQ2057&lt;/a&gt; de la empresa Texas Instruments. Según la necesidad, se tienen dos opciones:&lt;/p&gt;
+
+&lt;p&gt;Tener en cuenta lo siguiente:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Reemplazar R2 por una resistencia de 0 Ohms.&lt;/li&gt;
+  &lt;li&gt;No colocar los componentes R4, R9 y J3.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;opcion-a&quot;&gt;OPCION A&lt;/h5&gt;
+
+&lt;p&gt;Se necesita un cargador de baterías de 3.7V. El integrado a utilizar es el BQ2057T.&lt;/p&gt;
+
+&lt;h5 id=&quot;opcion-b&quot;&gt;OPCION B&lt;/h5&gt;
+
+&lt;p&gt;Se necesita un cargador de baterías de 7.4V (dos celdas en serie). El integrado a utilizar es el BQ2057W.&lt;/p&gt;
+
+&lt;h3 id=&quot;funcionamiento&quot;&gt;Funcionamiento&lt;/h3&gt;
+
+&lt;p&gt;Al conectar una batería descargada, se enciende el LED indicando que comenzó la carga. Una vez concluída la carga, el LED se apaga.&lt;/p&gt;
+
+&lt;h3 id=&quot;archivos&quot;&gt;Archivos&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Circuito (imprimir a escala): &lt;a href=&quot;/files/proyectos/009/009_PCB.pdf&quot;&gt;PDF&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Esquemático: &lt;a href=&quot;/files/proyectos/009/009_Esquematico.pdf&quot;&gt;PDF&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;lista-de-componentes&quot;&gt;Lista de componentes:&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;x1&lt;/em&gt;&lt;/strong&gt; BQ2057 x 1&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;x2&lt;/em&gt;&lt;/strong&gt; Resistencia SMD 1206 0&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;x2&lt;/em&gt;&lt;/strong&gt; Resistencia SMD 1206 1k&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;x1&lt;/em&gt;&lt;/strong&gt; Resistencia SMD 1206 2.2k&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;x2&lt;/em&gt;&lt;/strong&gt; Resistencia SMD 1206 10k&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;x2&lt;/em&gt;&lt;/strong&gt; Capacitor cerámico 100nF&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;x1&lt;/em&gt;&lt;/strong&gt; LED de 5mm&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;x1&lt;/em&gt;&lt;/strong&gt; Resistencia Trough hole 0.47&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;x1&lt;/em&gt;&lt;/strong&gt; Transistor PNP BD136&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;notas&quot;&gt;Notas:&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Guiarse con el esquemático y las fotos del álbum para el armado. R1 colocarla de manera vertical.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;En caso de querer aumentar la corriente de carga, se puede poblar también a R8 que es igual que R1 (pasaría de 200 a 400 mA).&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Para más información o para pedir muestras del BQ2057 puede visitarse el siguiente &lt;a href=&quot;http://www.ti.com/product/bq2057&quot;&gt;link&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 14 Apr 2015 16:07:05 -0300</pubDate>
+        <link>http://localhost:4000/proyectos/009/</link>
+        <guid isPermaLink="true">http://localhost:4000/proyectos/009/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>[P008] Adaptador UART-Bluetooth</title>
+        <description>&lt;p&gt;Se diseñó el circuito para lograr un adaptador UART a Bluetooth, lo que permite un modo práctico de comunicación de un microcontrolador con algún dispositivo BT, ya sea una PC o un celular. El componente principal es el integrado &lt;a href=&quot;http://www.ti.com/lit/ds/symlink/lmx9838.pdf&quot;&gt;LMX9838&lt;/a&gt; de Texas Instruments. El resto de componentes son resistencias 1206 de 1k y capacitores electrolíticos de 2uF y cerámicos de 10 nF. El LED smd y su resistencia de 220 Ohms 1206 es opcional. El LED es sólo señalizador.&lt;/p&gt;
+
+&lt;h4 id=&quot;archivos&quot;&gt;Archivos:&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Circuito para imprimir (imprimir a escala): Tener en cuenta que los componenentes deben soldarse del mismo lado que se colocan. Esto se debe a que se utiliza una sola capa en vez de dos para mayor facilidad en la fabricación del circuito. Además, debe soldarse un puente para conectar los pads que no poseen pistas que los unan (ver las fotos del álbum): &lt;a href=&quot;/files/proyectos/008/008_PCB.pdf&quot;&gt;PDF&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Esquemático: &lt;a href=&quot;/files/proyectos/008/008_Esquematico.pdf&quot;&gt;PDF&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;lista-de-componentes&quot;&gt;Lista de componentes:&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;1x&lt;/em&gt;&lt;/strong&gt; LMX9838&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;4x&lt;/em&gt;&lt;/strong&gt; Resistencia SMD 1206 1k&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;2x&lt;/em&gt;&lt;/strong&gt; Capacitor electrolítico 2.2uF&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;2x&lt;/em&gt;&lt;/strong&gt; Capacitor cerámico 10nF&lt;/li&gt;
+  &lt;li&gt;Un alambre para puentear 3 pads.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;notas&quot;&gt;Notas:&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Conviene colocar los capacitores del otro lado de la placa y doblarles las patas para que queden “apoyados” sobre la placa. Esto es para que sea más compacto el diseño y además facilita el soldado de los capacitores.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Depende como y dónde se vaya a usar el conversor, quizás convenga poner la tira de pines a 90° en vez de rectos, como se muestra en las figuras en 3D. Ver las fotos del álbum para más detalles.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Para más información o para pedir muestras del LMX9838 puede visitarse el siguiente &lt;a href=&quot;http://www.ti.com/product/lmx9838&quot;&gt;link&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 04 Feb 2015 16:07:05 -0300</pubDate>
+        <link>http://localhost:4000/proyectos/008/</link>
+        <guid isPermaLink="true">http://localhost:4000/proyectos/008/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>[P001] Seguidor de Líneas</title>
+        <description>&lt;p&gt;Robot seguidor de líneas. Consiste en un Arduino UNO, un shield de potencia y polarización de sensores, una placa de sensores reflexivos y un par de motores de continua.
+Este proyecto se compone de dos partes:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;em&gt;Shield de potencia&lt;/em&gt;&lt;/strong&gt;: Permite controlar un par de motores de continua con el Arduino.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;em&gt;Placa de sensores reflectivos&lt;/em&gt;&lt;/strong&gt;: Permiten que el Arduino identifique cuando se encuentra sobre la línea a seguir.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;archivos&quot;&gt;Archivos&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Informe del proyecto. &lt;a href=&quot;/files/proyectos/001/001_Informe del Proyecto.pdf&quot;&gt;PDF&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Circuito shield de potencia (imprimir a escala):
+Este shield cuenta con dos capas, por lo que fabricarlo es un poco más difícil que en el caso de la placa de pruebas para Arduino que sólo tenía una capa. Aquí los links: &lt;a href=&quot;/files/proyectos/001/001_PCB Top.pdf&quot;&gt;Capa TOP&lt;/a&gt; | &lt;a href=&quot;/files/proyectos/001/001_PCB Bottom.pdf&quot;&gt;Capa BOTTOM&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Esquemático del shield ESQUEMATICO. &lt;a href=&quot;/files/proyectos/001/001_Esquematico Shield.pdf&quot;&gt;PDF&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Proyecto de Eagle del shield: Aquí está el proyecto completo en Eagle para los que deseen ver más en detalle o quieran realizar modificaciones. &lt;a href=&quot;/files/proyectos/001/001_Eagle - Shield.zip&quot;&gt;ZIP&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Circuito placa de sensores (imprimir a escala): Esta placa contempla tres sensores CNY70. &lt;a href=&quot;/files/proyectos/001/001_PCB Sensores.pdf&quot;&gt;PDF&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Esquemático de la placa de sensores. &lt;a href=&quot;/files/proyectos/001/001_Esquematico Sensores.pdf&quot;&gt;PDF&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Proyecto de Eagle placa de sensores: Aquí está el proyecto completo en Eagle para los que deseen ver más en detalle o quieran realizar modificaciones. &lt;a href=&quot;/files/proyectos/001/001_Eagle - Sensores.zip&quot;&gt;ZIP&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;notas&quot;&gt;Notas:&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Al final del informe, está la lista de componentes del shield.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Para el armado, puede seguirse las fotos de la placa en 3D que se encuentran en el informe y en el esquemático que también se adjunta.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Los precios colocados en los componentes al final del informe están desactualizados, por lo que no se los debe tomar como referencia.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Para el soldado, debe tenerse especial cuidado en soldar de ambos lados de la placa todos los pines de la misma. Esto es para conectar ambas caras del circuito, lo cual es necesario para que funcione correctamente el shield.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 15 Aug 2013 16:07:05 -0300</pubDate>
+        <link>http://localhost:4000/proyectos/001/</link>
+        <guid isPermaLink="true">http://localhost:4000/proyectos/001/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>[P000] Placa de Pruebas</title>
+        <description>&lt;p&gt;Placa de pruebas que permite probar funciones básicas de un ARDUINO UNO.&lt;/p&gt;
+
+&lt;h3 id=&quot;archivos&quot;&gt;Archivos&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Lista de Componentes: &lt;a href=&quot;/files/proyectos/000/000_Lista de Componentes.pdf&quot;&gt;PDF&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Circuito para imprimir (imprimir a escala): Tener en cuenta que los componenentes deben soldarse del mismo lado que se colocan. Esto se debe a que se utiliza una sola capa en vez de dos para mayor facilidad en la fabricación del circuito. &lt;a href=&quot;/files/proyectos/000/000_PCB.pdf&quot;&gt;PDF&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Guía de armado: Fotos de la placa armada y ayuda para soldar los componentes. &lt;a href=&quot;/files/proyectos/000/000_Guia de Armado.pdf&quot;&gt;PDF&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Guía para uso: Explicación para utilizar el shield con el Arduino. &lt;a href=&quot;/files/proyectos/000/000_Guia de Uso.pdf&quot;&gt;PDF&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 11 Mar 2013 16:07:05 -0300</pubDate>
+        <link>http://localhost:4000/proyectos/000/</link>
+        <guid isPermaLink="true">http://localhost:4000/proyectos/000/</guid>
+        
+        
+      </item>
+    
   </channel>
 </rss>
